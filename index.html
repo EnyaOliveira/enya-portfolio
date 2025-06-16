@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enya Oliveira – Software Engineer</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    .page {
+      background: white;
+      max-width: 794px; /* A4 width */
+      min-height: 1123px;
+      margin: auto;
+      padding: 2rem;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .photo-container {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    .photo-container img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+    }
+
+    .speech-bubble {
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #111827;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      white-space: nowrap;
+      transition: opacity 0.3s ease;
+      opacity: 1;
+    }
+
+    .speech-bubble::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 6px solid transparent;
+      border-top-color: #111827;
+    }
+
+    h1 {
+      margin-top: 0.5rem;
+      margin-bottom: 0;
+    }
+
+    p {
+      margin-top: 0.5rem;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #777;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="page">
+    <header>
+      <div class="photo-container">
+        <img id="profileImage" src="picture.jpeg" alt="Enya Oliveira" />
+        <div class="speech-bubble" id="bubble">don't hover over the picture</div>
+      </div>
+      <h1>Enya Oliveira</h1>
+      <p>Computer Science student at Inteli · Aspiring Software Engineer</p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I'm a Brazilian computer science student with real-world experience across fintech and quantitative investing. From optimizing investment strategies with machine learning at Quantique to building backend systems at Nubank and BTG Pactual, I’m driven by creating tools that deliver tangible value through data and technology.
+      </p>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <ul>
+        <li><strong>Quantique:</strong> Led ML project for strategy optimization</li>
+        <li><strong>BTG Pactual:</strong> LLM sentiment analysis & backend alerts</li>
+        <li><strong>Nubank:</strong> Automation for risk analysis</li>
+      </ul>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+        <ul>
+          <li><strong>Thermal Vision System:</strong> Built a cattle temperature monitor using computer vision and thermal imaging.</li>
+          <li><strong>IDE for Occupational Therapy:</strong> Developed an IDE to program a sensory mat for healthcare professionals.</li>
+          <li><strong>IoT Tracker:</strong> Created a mobile device tracker for Pirelli's industrial floor.</li>
+        </ul>
+      </section>
+
+    <section>
+        <h2>Skills</h2>
+        <p>Python · JavaScript · Java · SQL · Git · Machine Learning · UX/UI · Agile · Data Analytics</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>
+        📧 enya.arruda@sou.inteli.edu<br>
+        📍 São Paulo, Brazil
+      </p>
+    </section>
+  </div>
+
+  <script>
+    const img = document.getElementById('profileImage');
+    const bubble = document.getElementById('bubble');
+    let swapped = false;
+
+    img.addEventListener('mouseenter', () => {
+      if (!swapped) {
+        img.src = 'picture2.jpeg';
+        bubble.style.opacity = 0;
+        swapped = true;
+      }
+    });
+  </script>
+
+</body>
+</html>
